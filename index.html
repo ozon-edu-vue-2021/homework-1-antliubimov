@@ -53,10 +53,10 @@
             },
             methods: {
                 incrementCounterHandler() {
-                    this.counter++;
+                    this.counter += 1;
                 },
                 decrementCounterHandler() {
-                    this.counter--;
+                    this.counter -= 1;
                 },
                 incrementStepHandler() {
                     this.step += 2;
@@ -113,7 +113,7 @@
         const queue = [getSum];
 
         Object.keys(data).forEach(key => {
-            let value = data[key]; // data.counter, data.counter1, data.counter2
+            let value = data[key];
             Object.defineProperty(data, key, {
                 get: function () {
                     console.log('get');
